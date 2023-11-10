@@ -3,26 +3,26 @@
         {
             "id": 1,
             "name": "Feijão",
-            "marca": "Ficticia",
-            "valor": 30
+            "brand": "Ficticia",
+            "value": 30
         },
         {
             "id": 2,
             "name": "Arroz",
-            "marca": "Ficticia",
-            "valor": 30
+            "brand": "Ficticia",
+            "value": 30
         },
         {
             "id": 3,
             "name": "Macarrão",
-            "marca": "Ficticia",
-            "valor": 30
+            "brand": "Ficticia",
+            "value": 30
         },
         {
             "id": 4,
             "name": "Carne",
-            "marca": "Ficticia",
-            "valor": 30
+            "brand": "Ficticia",
+            "value": 30
         }
     ]
 }

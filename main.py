@@ -47,7 +47,7 @@ def list_products():
     for product in DATABASE['products']:
         print(f'- Código: {product["id"]}')
         print(f'- Nome: {product["name"]}')
-        print(f'- Valor: {format_value(product["valor"])}')
+        print(f'- Valor: {format_value(product["value"])}')
         print('')
 
 
