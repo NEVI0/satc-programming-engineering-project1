@@ -34,7 +34,7 @@ def ask_action():
 
     print('Ações disponíveis: ')
     print(' - 1. Lista de produtos;')
-    print(' - 2. Realizar compra;')
+    print(' - 2. Realizar venda;')
     print(' - 3. Faturamento total;')
     print(' - 4. Sair;')
 
@@ -53,7 +53,7 @@ def list_products():
 
 def list_purchases(purchases):
     if len(purchases) == 0:
-        print('Nenhuma compra realizada!')
+        print('Nenhuma venda realizada!')
     
         return
 
@@ -66,7 +66,7 @@ def list_purchases(purchases):
         print(f'- Valor: {format_value(purchase["total"])}')
         print('')
 
-    print(f'Total em compras: {format_value(total)}')
+    print(f'Total: {format_value(total)}')
 
 
 def get_product_by_id(id):
@@ -81,7 +81,7 @@ def get_product_by_id(id):
 
 
 def make_purchase():
-    print('--------- Nova compra --------')
+    print('--------- Nova venda --------')
     print('')
 
     total = 0
@@ -99,7 +99,7 @@ def make_purchase():
 
         if product is not None:
             product_count += 1
-            total += product['valor']
+            total += product['value']
         else:
             print('Produto não encontrado!')
 
@@ -119,7 +119,7 @@ while choose_action != 4:
 
         if choose_action not in AVAIABLE_ACTIONS:
             print('')
-            print('Ops... Você deve selecionar um número válido!')
+            print('Ops... Você deve selecionar uma opção válida!')
 
             ask_to_continue()
             choose_action = None
@@ -134,7 +134,7 @@ while choose_action != 4:
 
             if total == 0:
                 print('')
-                print('Compra não registrada!')
+                print('Venda não registrada!')
             else:
                 current_date = datetime.now()
                 formatted_date = current_date.strftime('%H:%M:%S')
@@ -145,7 +145,7 @@ while choose_action != 4:
                 })
 
                 print('')
-                print(f'Total da compra: {format_value(total)}')
+                print(f'Total da venda: {format_value(total)}')
 
         if choose_action == 3:
             list_purchases(all_purchases)
